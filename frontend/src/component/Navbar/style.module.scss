@@ -1,0 +1,192 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.topHeader{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    padding: 1em 5em;
+    background-color: $primary-color;
+    @include large-screen{
+        padding: 1em 2em;
+    }
+    @include tablet-screen{
+        padding: 1em 1em;
+        @include flex-row-vp;
+        @include gap-y-6;
+    }
+}
+
+.localSite{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include mobile-screen{
+        @include flex-row-vp;
+        @include w-full;
+        @include gap-y-6;
+        @include w-full;
+    }
+}
+
+.localSite > div:nth-child(1){
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+    border-right: 1px solid $borderC;
+    padding-right: 2em;
+    @include mobile-screen{
+        padding-right: 0;
+        border: none;
+        @include w-full;
+    }
+}
+
+.localSite > div:nth-child(2){
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+    border-left: 1px solid $borderC;
+    padding-left: 1em;
+    @include mobile-screen{
+        padding-left: 0;
+        border: none;
+        @include w-full;
+    }
+}
+
+.locSite{
+    line-height: 1.1em;
+}
+
+.locSite > div:nth-child(1){
+    font-size: 14px;
+    font-family: $font-Inter;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 0.7);
+    @include mobile-screen{
+        font-size: 12px;
+        @include w-full;
+    }
+}
+
+.locSite > div:nth-child(2){
+    font-size: 14px;
+    font-family: $font-Inter;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 0.7);
+    @include mobile-screen{
+        font-size: 12px;
+        @include w-full;
+    }
+}
+
+.phoneSite{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+}
+
+.phoneSite > div:nth-child(1){
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+}
+
+.phoneSite > div:nth-child(2){
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+}
+
+.mainNav{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    border-top: 2px solid $borderC;
+    margin: 0em 5em;
+    padding: 0.8em 0em;
+    @include large-screen{
+        margin: 0em 2em;
+    }
+    @include tablet-screen{
+        margin: 0em 1em;
+    }
+    @include small-screen{
+        margin: 0em 0.3em;
+    }
+}
+
+.Btn{
+    font-family: $font-Inter-Bold;
+    @include tablet-screen{
+        font-size: 12px !important;
+        padding: 1em !important;
+    }
+}
+
+.navLink{
+    text-align: center;
+    @include mobile-screen{
+        display: none;
+    }
+}
+
+.navLink ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navLink ul li{
+    display: inline-block;
+    padding-right: 2.5em;
+    text-align: center;
+    position: relative;
+    @include medium-screen{
+     padding-right: 1em;   
+    }
+}
+
+.navLink ul li > a{
+    color: $navC;
+    font-family: $font-Inter-Bold;
+    font-size: 16px;
+    line-height: 2.5em;
+    @include tablet-screen{
+        font-size: 14px;
+        line-height: 3em;
+    }
+}
+
+.overLine{
+    position: absolute;
+    height: 4px;
+    background-color: $navC;
+    width: 0%;
+    bottom: 45%;
+    left: -3%;
+}
+
+.maniLogo{
+    display: block;
+}
+
+.navBar{
+    display: none;
+    @include mobile-screen{
+        display: block;
+    }
+}
+
+.navEnd{
+    @include flex;
+    @include flex-row;
+    @include gap-x-3;
+}
+
+.langBar{
+    @include mobile-screen{
+        display: none;
+    }
+}

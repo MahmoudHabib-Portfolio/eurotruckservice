@@ -1,0 +1,52 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.truckServ{
+    position: relative;
+    padding: 2em 0em 0em 5em;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+    height: 28em;
+    @include large-screen{
+        padding: 2em 0em 0em 2em;
+        height: 20em;
+    }
+    @include small-screen{
+        padding: 2em 0em 0em 1em;
+    }
+}
+
+.breadCrumb{
+    @include flex;
+    @include flex-col;
+    @include gap-y-6;
+    position: absolute;
+    top: 2em;
+    width: 35%;
+    @include large-screen{
+        width: 45%;
+    }
+}
+
+.breadCrumb > div:nth-child(1){
+    color: $navC;
+    font-family: $font-Inter-Bold;
+    font-size: 55px;
+    @include tablet-screen{
+        font-size: 30px;
+    }
+    @include small-screen{
+        font-size: 25px;
+    }
+}
+
+.breadCrumb > div > p{
+    font-family: $font-Inter;
+    color: rgba(51, 51, 51, 0.8);
+}
+
+.Btn{
+    font-family: $font-Inter-Bold;
+}
+

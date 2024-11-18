@@ -1,0 +1,56 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.siteContainer{
+    @include flex;
+    @include flex-row;
+    @include w-full;
+    background: $siteBckg;
+    opacity: 0;
+    @include mobile-screen{
+        @include flex-row-vp;
+    }
+}
+
+.siteContainer > div:nth-child(1){
+    padding: 5em 0em 5em 5em;
+    box-sizing: border-box;
+    width: 50%;
+    display: block;
+    @include large-screen{
+        padding: 5em 1em 5em 2em;
+    }
+    @include mobile-screen{
+        padding: 2em 0em 2em 2em;
+        width: 100%;
+    }
+}
+
+.siteContainer > div:nth-child(2){
+    box-sizing: border-box;
+    width: 50%;
+    height: "100%";
+    display: block;
+    @include mobile-screen{
+        width: 100%;
+        height: 35vh;
+    }
+}
+
+.textHead{
+    color: $navC;
+    font-family: $font-Inter-Bold;
+    font-size: 32px;
+    padding-bottom: 1em;
+    position: relative;
+    display: inline-block;
+    @include small-screen{
+        font-size: 26px;
+    }
+}
+
+.siteContainer > div:nth-child(1) > p{
+    padding: 0.5em 0em;
+    font-family: $font-Inter;
+    color: $navC;
+}

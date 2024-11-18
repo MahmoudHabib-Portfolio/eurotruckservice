@@ -1,0 +1,139 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.servBlock{
+    padding: 2em 10em;
+    opacity: 0;
+    @include large-screen{
+        padding: 2em 3em;
+    }
+    @include mobile-screen{
+        padding: 1em 0em;
+    }
+}
+
+.servHead > h2{
+    color: $navC;
+    font-family: $font-Inter-Bold;
+    font-size: 2.8em;
+    text-align: center;
+    @include tablet-screen{
+        font-size: 2em;
+    }
+    @include small-screen{
+        font-size: 1.5em;
+    }
+}
+
+.servHead > p {
+    padding: 1.3em 0em;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.8);
+    font-family: $font-Inter;
+    margin: 0em 17em;
+    @include tablet-screen{
+        margin: 0em 2em;
+    }
+}
+
+.multiServ{
+    @include flex;
+    @include flex-col;
+    @include gap-y-6;
+    @include w-full;
+    padding: 1em 2em;
+    opacity: 0;
+    @include mobile-screen{
+        padding: 1em 1em;
+    }
+}
+
+.multiServ > div:nth-child(1){
+    @include flex;
+    @include flex-row;
+    @include gap-x-8;
+    @include w-full;
+    @include small-screen{
+        @include flex-row-vp;
+        @include gap-y-4;
+    }
+}
+
+.multiServ > div:nth-child(2){
+    @include flex;
+    @include flex-row;
+    @include gap-x-8;
+    @include w-full;
+    @include small-screen{
+        @include flex-row-vp;
+        @include gap-y-4;
+    }
+}
+
+.servDiv01, .servDiv02, .servDiv03, .servDiv04{
+    background-color: $servBlockBckg;
+    padding: 1em 0em 1em 1em;
+    border-radius: 9px;
+}
+
+.servDiv01{
+    background-image: url('../../assets/imgs/engine-carens-automotive.webp');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: bottom right;
+    @include large-screen{
+        background-size: 45%;
+    }
+    @include small-screen{
+        background-size: 25%;
+    }
+}
+
+.servDiv02{
+    background-image: url('../../assets/imgs/Lovepik.webp');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom right;
+    @include small-screen{
+        background-size: 35%;
+    }
+}
+
+.servDiv03{
+    background-image: url('../../assets/imgs/PngItem.webp');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: bottom right;
+    @include small-screen{
+        background-size: 35%;
+    }
+}
+
+.servDiv04{
+    background-image: url('../../assets/imgs/pensineGallon.webp');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: bottom right;
+    @include small-screen{
+        background-size: 20%;
+    }
+}
+
+.servBody{
+    width: 50%;
+    @include tablet-screen{
+        width: 60%;
+    }
+}
+
+.servBody > h3{
+    font-family: $font-Inter-Bold;
+    color: $navC;
+}
+
+.servBody > p{
+    padding: 1em 0em;
+    font-family: $font-Inter;
+    color: $navC;
+    font-size: 14px;
+}

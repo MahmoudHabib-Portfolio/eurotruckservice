@@ -1,0 +1,62 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.serviceCont{
+    background-image: url('../../assets/imgs/truck-driver.webp');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    @include w-full;
+    height: 100%;
+    padding: 4em 6em 4em 0em;
+    opacity: 0;
+    @include flex;
+    @include flex-row;
+    @include justify-end;
+    @include mobile-screen{
+        padding: 2em 0em 2em 0em;
+        @include justify-center;
+    }
+}
+
+.subscribeCont{
+    background: $primary-color;
+    padding: 1.5em 3em 1em 3em;
+    border-radius: 15px;
+    width: 40%;
+    @include medium-screen{
+        padding: 1em 1.5em 1em 1em;
+        width: 50%;
+    }
+    @include mobile-screen{
+        padding: 1em 1.5em 1em 1em;
+        width: 75%;
+    }
+}
+
+.subscribeCont > div > h1{
+    color: $navC;
+    font-family: $font-Inter-Bold;
+    @include small-screen{
+        font-size: 22px;
+    }
+}
+
+.subscribeCont > div > p{
+    font-family: $font-Inter;
+    font-size: 13px;
+    padding: 0.8em 0em;
+}
+
+.subscribForm{
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+    padding: 1em 0em;
+    @include w-full;
+}
+
+.sendButtn{
+    font-family: $font-Inter !important;
+}
+

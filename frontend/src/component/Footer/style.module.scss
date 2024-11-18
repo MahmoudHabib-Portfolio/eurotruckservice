@@ -1,0 +1,97 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.footBlock{
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+    @include w-full;
+    background: $footBckg;
+    padding: 2.5em 10em 0em 10em;
+    @include large-screen{
+        padding: 2.5em 1em 0em 1em;
+    }
+}
+
+.footBody{
+    @include flex;
+    @include flex-row;
+    @include gap-x-12;
+    @include w-full;
+    padding-bottom: 2em;
+    @include large-screen{
+        @include gap-x-6;
+    }
+    @include tablet-screen{
+        @include gap-x-3;
+        @include flex-row-vp;
+        @include gap-y-6;
+    }
+}
+
+.siteMap{
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+    @include w-full;
+    @include large-screen{
+        @include gap-x-3;
+    }
+    @include mobile-screen{
+        @include flex-row-vp;
+        @include gap-y-6;
+    }
+}
+
+.footCol{
+    @include flex;
+    @include flex-col;
+    @include gap-y-3;
+}
+
+.footCol > div:nth-child(1){
+    color: $primary-color;
+    font-family: $font-Inter-Bold;
+}
+
+.footCol > div:nth-child(2) > ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footCol > div:nth-child(2) > ul > li{
+    display: list-item;
+    padding: 0.3em;
+    color: $primary-color;
+    font-family: $font-Inter;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.footCol > div:nth-child(2) > ul > li > a{
+    color: $primary-color;
+    font-family: $font-Inter;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.whatts{
+    @include flex;
+    @include flex-row;
+    @include gap-x-2;
+}
+
+.whatts > div:nth-child(2){
+    font-size: 12px;
+    line-height: 1.8em;
+}
+
+.footCopy{
+    padding: 2em 0em;
+    border-top: 1px solid $footCopy;
+    @include w-full;
+    font-family: $font-Inter;
+    color: $footCopy;
+    font-size: 12px;
+}

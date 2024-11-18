@@ -1,0 +1,22 @@
+@media screen and (max-width:600px){
+  .logoSvg{
+      width: 165px;
+      height: 10;
+  }
+}
+
+.ant-drawer-body {
+  padding: 0px !important;
+}
+
+.ant-drawer-header{
+  padding: 16px 8px !important;
+}
+
+a.mapboxgl-ctrl-logo{
+display: none;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib{
+display: none;
+}

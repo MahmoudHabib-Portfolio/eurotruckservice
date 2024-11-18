@@ -1,0 +1,18 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.LangCont{
+    @include flex;
+    @include flex-row;
+    @include gap-x-1;
+    padding: 0.5em 0em;
+}
+
+.lang{
+    color: $navC;
+    font-family: $font-Inter-Bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    line-height: 1.6em;
+}

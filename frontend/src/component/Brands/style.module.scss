@@ -1,0 +1,69 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/mixins" as *;
+
+.brandBlock{
+    @include flex;
+    @include flex-row;
+    @include w-full;
+    padding: 2em 5em;
+    opacity: 0;
+    @include tablet-screen{
+        padding: 2em 5em;
+    }
+    @include medium-screen{
+        padding: 2em 2em;
+    }
+    @include mobile-screen{
+        @include flex-row-vp;
+        @include gap-y-6;
+    }
+}
+
+.brandBlock > div{
+    width: 50%;
+    @include mobile-screen{
+        width: 100%;
+    }
+}
+
+.brandBlock > div > section > h2{
+    font-family: $font-Inter-Bold;
+    color: $navC;
+    font-size: 32px;
+    @include tablet-screen{
+        font-size: 25px;
+    }
+}
+
+.brandBlock > div > section > p {
+    font-family: $font-Inter-Bold;
+    color: rgba(51, 51, 51, 0.8);
+    padding: 1em 0em;
+    font-size: 14px;
+}
+
+.brandCollection{
+    @include flex;
+    @include flex-col;
+    @include gap-y-6;
+    padding: 0em 2em 0em 3em;
+    @include small-screen{
+    padding: 0em;
+    }
+}
+
+.brandCollection > div:nth-child(1){
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+}
+
+.brandCollection > div:nth-child(2){
+    text-align: center;
+}
+
+.brandCollection > div:nth-child(3){
+    @include flex;
+    @include flex-row;
+    @include justify-between;
+}
